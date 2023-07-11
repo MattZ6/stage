@@ -18,6 +18,12 @@ const { styled } = createStitches({
       textHighContrast: '#ECEDEE',
       textLowContrast: '#9BA1A6',
     },
+
+    fonts: {
+      regular: 'Inter_400Regular',
+      semiBold: 'Inter_600SemiBold',
+      bold: 'Inter_700Bold',
+    },
   },
   utils: {
     shadow: (level: 'small' | 'medium' | 'large') => {
