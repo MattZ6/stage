@@ -7,6 +7,7 @@
     "camelcase": "off",
     "react/self-closing-comp": "error",
     "no-async-promise-executor": "off",
+    "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -24,9 +25,10 @@
           "/^@hooks/",
           "/^@services/",
           "/^@utils/",
+          "/^@screens/",
           "/^@components/",
           "/^@assets/",
-          "/^@themes/",
+          "/^@styles/",
           "/^./components/",
           "/^./styles/",
           ["parent", "sibling", "index"]
