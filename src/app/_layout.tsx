@@ -6,6 +6,8 @@ import {
 } from '@expo-google-fonts/inter'
 import { Stack } from 'expo-router/stack'
 
+import { Provider } from '@contexts/Provider'
+
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
@@ -18,10 +20,12 @@ export default function Layout() {
   }
 
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    />
+    <Provider>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      />
+    </Provider>
   )
 }

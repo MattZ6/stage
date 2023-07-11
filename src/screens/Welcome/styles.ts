@@ -32,33 +32,24 @@ export namespace WelcomeScreenStyles {
     color: '$textHighContrast',
   })
 
-  export const Footer = styled('View', {
+  export const Content = styled('View', {
+    gap: 40,
     padding: 16,
+  })
+
+  export const Links = styled('View', {
+    gap: 16,
+  })
+
+  export const Footer = styled('View', {
     gap: 16,
   })
 
   export const AppVersion = styled('Text', {
+    fontFamily: '$regular',
     fontSize: 14,
     lineHeight: 24,
     color: '$textLowContrast',
     textAlign: 'center',
-  })
-}
-
-export namespace ButtonStyles {
-  export const Container = styled('View', {
-    flexDirection: 'row',
-    alignItems: 'center',
-
-    height: 48,
-    backgroundColor: '$elementBackgroundSolid',
-    borderRadius: 8,
-
-    paddingHorizontal: 12,
-  })
-
-  export const Title = styled('Text', {
-    fontSize: 14,
-    color: '$textHighContrast',
   })
 }

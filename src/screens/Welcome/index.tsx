@@ -2,12 +2,17 @@ import { Link } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import ArrowRight from 'phosphor-react-native/src/icons/ArrowRight'
 import UserCirclePlus from 'phosphor-react-native/src/icons/UserCirclePlus'
+import { useTranslation } from 'react-i18next'
 
 import { ExtendButton } from '@components/ExtendButton'
 
-import { WelcomeScreenStyles as Styles, ButtonStyles } from './styles'
+import { LanguageSelect } from './components'
+
+import { WelcomeScreenStyles as Styles } from './styles'
 
 export function WelcomeScreen() {
+  const { t } = useTranslation('welcome')
+
   return (
     <>
       <StatusBar style="light" />
@@ -20,41 +25,49 @@ export function WelcomeScreen() {
           }}
         >
           <Styles.Gradient>
-            <Styles.Title>Pronto pro Rock?</Styles.Title>
+            <Styles.Title>{t('title')}</Styles.Title>
           </Styles.Gradient>
         </Styles.Header>
 
-        <Styles.Footer>
-          <Link href="/home" asChild>
+        <Styles.Content>
+          <Styles.Links>
+            <Link href="/home" asChild>
+              <ExtendButton.Root>
+                <ExtendButton.Leading>
+                  <UserCirclePlus color="white" weight="bold" size={20} />
+                </ExtendButton.Leading>
+
+                <ExtendButton.Text>
+                  {t('links.create_account')}
+                </ExtendButton.Text>
+
+                <ExtendButton.Trailing>
+                  <ArrowRight color="white" weight="bold" size={20} />
+                </ExtendButton.Trailing>
+              </ExtendButton.Root>
+            </Link>
+
             <ExtendButton.Root>
-              <ExtendButton.Leading>
-                <UserCirclePlus color="white" weight="bold" size={20} />
-              </ExtendButton.Leading>
-
-              <ExtendButton.Text>Criar uma conta agora mesmo</ExtendButton.Text>
-
-              <ExtendButton.Trailing>
-                <ArrowRight color="white" weight="bold" size={20} />
-              </ExtendButton.Trailing>
+              <ExtendButton.Text>{t('links.sign_in')}</ExtendButton.Text>
             </ExtendButton.Root>
-          </Link>
 
-          <ExtendButton.Root>
-            <ExtendButton.Text>Já tenho uma conta</ExtendButton.Text>
-          </ExtendButton.Root>
+            <Link href="/music-styles" asChild>
+              <ExtendButton.Root>
+                <ExtendButton.Text>Ver estilos musicais</ExtendButton.Text>
 
-          <Link href="/music-styles" asChild>
-            <ExtendButton.Root>
-              <ExtendButton.Text>Ver estilos musicais</ExtendButton.Text>
+                <ExtendButton.Trailing>
+                  <ArrowRight color="white" weight="bold" size={20} />
+                </ExtendButton.Trailing>
+              </ExtendButton.Root>
+            </Link>
+          </Styles.Links>
 
-              <ExtendButton.Trailing>
-                <ArrowRight color="white" weight="bold" size={20} />
-              </ExtendButton.Trailing>
-            </ExtendButton.Root>
-          </Link>
+          <Styles.Footer>
+            <LanguageSelect />
 
-          <Styles.AppVersion>v0.0.0</Styles.AppVersion>
-        </Styles.Footer>
+            <Styles.AppVersion>v0.0.0</Styles.AppVersion>
+          </Styles.Footer>
+        </Styles.Content>
       </Styles.Container>
     </>
   )
