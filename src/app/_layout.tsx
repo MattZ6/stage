@@ -24,6 +24,9 @@ export default function Layout() {
       <Stack
         screenOptions={{
           headerShown: false,
+          contentStyle: {
+            backgroundColor: '#151718',
+          },
         }}
       />
     </Provider>
