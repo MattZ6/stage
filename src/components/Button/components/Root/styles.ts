@@ -10,6 +10,7 @@ export namespace ButtonRootStyles {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    gap: '$space$sm',
 
     paddingHorizontal: '$base',
 
