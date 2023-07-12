@@ -1,0 +1,14 @@
+{
+  "title": "Sign in",
+  "form": {
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Type your e-mail address"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Type your password"
+    },
+    "button": "Rock'n roll"
+  }
+}

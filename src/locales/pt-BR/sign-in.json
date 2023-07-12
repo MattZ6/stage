@@ -1,0 +1,14 @@
+{
+  "title": "Entrar",
+  "form": {
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Digite seu endereço de e-mail"
+    },
+    "password": {
+      "label": "Senha",
+      "placeholder": "Digite sua senha"
+    },
+    "button": "Rock'n roll"
+  }
+}

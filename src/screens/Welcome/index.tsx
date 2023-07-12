@@ -51,7 +51,7 @@ export function WelcomeScreen() {
               </Button.Root>
             </Link>
 
-            <Link href="/home" asChild>
+            <Link href="/sign-in" asChild>
               <Button.Root>
                 <Button.Text>{t('links.sign_in')}</Button.Text>
               </Button.Root>
