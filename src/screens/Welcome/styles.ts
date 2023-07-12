@@ -17,38 +17,35 @@ export namespace WelcomeScreenStyles {
     flex: 1,
     justifyContent: 'flex-end',
 
-    paddingTop: Constants.statusBarHeight + 16,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-  }).attrs(({ theme }) => ({
-    colors: ['transparent', theme.colors.backgroundSolid],
-    locations: [0.2, 0.875],
-  }))
+    paddingTop: Constants.statusBarHeight + '$base',
+    paddingHorizontal: '$base',
+    paddingBottom: '$base',
+  })
 
   export const Title = styled('Text', {
     fontFamily: '$bold',
-    fontSize: 48,
-    lineHeight: 60,
+    fontSize: '$xxl',
+    lineHeight: '$xxl',
     color: '$textHighContrast',
   })
 
   export const Content = styled('View', {
-    gap: 40,
-    padding: 16,
+    gap: '$space$xl',
+    padding: '$base',
   })
 
   export const Links = styled('View', {
-    gap: 16,
+    gap: '$space$base',
   })
 
   export const Footer = styled('View', {
-    gap: 16,
+    gap: '$space$base',
   })
 
   export const AppVersion = styled('Text', {
     fontFamily: '$regular',
-    fontSize: 14,
-    lineHeight: 24,
+    fontSize: '$xs',
+    lineHeight: '$xs',
     color: '$textLowContrast',
     textAlign: 'center',
   })

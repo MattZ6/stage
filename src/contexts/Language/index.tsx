@@ -9,16 +9,13 @@ import {
   LanguageProviderTypes as ProviderTypes,
 } from './types'
 
-const [deviceLocale] = getLocales()
+i18next.use(initReactI18next).init({
+  fallbackLng: 'pt',
+  compatibilityJSON: 'v3',
+  resources,
+})
 
-function initialize(language: ContextTypes.Language) {
-  i18next.use(initReactI18next).init({
-    fallbackLng: 'pt',
-    lng: language,
-    compatibilityJSON: 'v3',
-    resources,
-  })
-}
+const [deviceLocale] = getLocales()
 
 const LanguageContext = createContext({} as ContextTypes.Context)
 
@@ -26,7 +23,7 @@ const LANGUAGE_OPTIONS: ContextTypes.Language[] = ['en', 'pt']
 
 function LanguageProvider(props: ProviderTypes.Props) {
   const [initialized, setInitialized] = useState(false)
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation(undefined, { i18n: i18next })
 
   const { language } = i18n
 
@@ -40,7 +37,7 @@ function LanguageProvider(props: ProviderTypes.Props) {
   useEffect(() => {
     // TODO: Read previous saved language from local storage (mmkv)
 
-    initialize(deviceLocale.languageCode as ContextTypes.Language)
+    i18next.changeLanguage(deviceLocale.languageCode as ContextTypes.Language)
 
     setInitialized(true)
   }, [])

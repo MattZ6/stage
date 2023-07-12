@@ -1,6 +1,6 @@
 import { createStitches } from 'stitches-native'
 
-const { styled } = createStitches({
+const { styled, useTheme } = createStitches({
   theme: {
     colors: {
       backgroundSolid: '#151718',
@@ -91,4 +91,4 @@ const { styled } = createStitches({
   },
 })
 
-export { styled }
+export { styled, useTheme }
