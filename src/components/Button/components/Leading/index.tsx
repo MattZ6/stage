@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 
-import { ExtendButtonLeadingStyles as Styles } from './styles'
+import { ButtonLeadingStyles as Styles } from './styles'
 
 type Props = {
   children: ReactNode
 }
 
-export function ExtendButtonLeading(props: Props) {
+export function ButtonLeading(props: Props) {
   return <Styles.Container {...props} />
 }

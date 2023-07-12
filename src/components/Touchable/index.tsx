@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import {
   Platform,
   TouchableNativeFeedback,
@@ -8,14 +9,16 @@ import {
 
 import { useTheme } from '@styles/stitches.config'
 
-type Props = TouchableNativeFeedbackProps & TouchableOpacityProps
+export type TouchableProps = TouchableNativeFeedbackProps &
+  TouchableOpacityProps
 
-export function Touchable(props: Props) {
+export const Touchable = forwardRef<never, TouchableProps>((props, ref) => {
   const theme = useTheme()
 
   if (Platform.OS === 'android') {
     return (
       <TouchableNativeFeedback
+        ref={ref}
         background={TouchableNativeFeedback.Ripple(
           theme.colors.elementBackgroundActive,
           false,
@@ -25,5 +28,7 @@ export function Touchable(props: Props) {
     )
   }
 
-  return <TouchableOpacity activeOpacity={0.6} {...props} />
-}
+  return <TouchableOpacity ref={ref} activeOpacity={0.6} {...props} />
+})
+
+Touchable.displayName = 'Touchable'

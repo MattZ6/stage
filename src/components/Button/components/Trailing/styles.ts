@@ -1,10 +1,10 @@
 import { styled } from '@styles/stitches.config'
 
-export namespace ExtendButtonLeadingStyles {
+export namespace ButtonTrailingStyles {
   export const Container = styled('View', {
     alignItems: 'center',
     justifyContent: 'center',
 
-    marginLeft: -4,
+    marginRight: -4,
   })
 }

@@ -1,11 +1,9 @@
 import { Link } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
-import ArrowRight from 'phosphor-react-native/src/icons/ArrowRight'
-import UserCirclePlus from 'phosphor-react-native/src/icons/UserCirclePlus'
 import { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { ExtendButton } from '@components/ExtendButton'
+import { Button } from '@components/Button'
 
 import { useTheme } from '@styles/stitches.config'
 
@@ -51,24 +49,16 @@ export function WelcomeScreen() {
         <Styles.Content>
           <Styles.Links>
             <Link href="/home" asChild>
-              <ExtendButton.Root>
-                <ExtendButton.Leading>
-                  <UserCirclePlus color="white" weight="bold" size={24} />
-                </ExtendButton.Leading>
-
-                <ExtendButton.Text>
-                  {t('links.create_account')}
-                </ExtendButton.Text>
-
-                <ExtendButton.Trailing>
-                  <ArrowRight color="white" weight="bold" size={24} />
-                </ExtendButton.Trailing>
-              </ExtendButton.Root>
+              <Button.Root>
+                <Button.Text>{t('links.create_account')}</Button.Text>
+              </Button.Root>
             </Link>
 
-            <ExtendButton.Root>
-              <ExtendButton.Text>{t('links.sign_in')}</ExtendButton.Text>
-            </ExtendButton.Root>
+            <Link href="/home" asChild>
+              <Button.Root>
+                <Button.Text>{t('links.sign_in')}</Button.Text>
+              </Button.Root>
+            </Link>
           </Styles.Links>
 
           <Styles.Footer>
