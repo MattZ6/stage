@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next'
 
 import { Button } from '@components/Button'
 
+// Foto de <a href="https://unsplash.com/@kyalloni?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kevin Yudhistira Alloni</a> na <a href="https://unsplash.com/pt-br/fotografias/sol7vhs8Pdg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 import { useTheme } from '@styles/stitches.config'
 
 import { LanguageSelect } from './components'
@@ -35,12 +37,7 @@ export function WelcomeScreen() {
       <StatusBar style="light" />
 
       <Styles.Container>
-        <Styles.Header
-          source={{
-            cache: 'force-cache',
-            uri: 'https://images.unsplash.com/photo-1556340346-5e30da977c4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-          }}
-        >
+        <Styles.Header source={require('@assets/background.jpg')}>
           <Gradient>
             <Styles.Title>{t('title')}</Styles.Title>
           </Gradient>
