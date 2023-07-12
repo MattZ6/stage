@@ -1,11 +1,7 @@
-import { HeaderStyles as Styles } from './styles'
+import { HeaderBackButton, HeaderRoot, HeaderTitle } from './components'
 
-export function Header() {
-  return (
-    <Styles.Container>
-      <Styles.Button>
-        <Styles.Icon />
-      </Styles.Button>
-    </Styles.Container>
-  )
+export namespace Header {
+  export const Root = HeaderRoot
+  export const BackButton = HeaderBackButton
+  export const Title = HeaderTitle
 }
