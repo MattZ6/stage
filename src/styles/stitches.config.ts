@@ -15,14 +15,51 @@ const { styled } = createStitches({
       elementBorderSolid: '#3A3F42',
       elementBorderHover: '#4C5155',
 
-      textHighContrast: '#ECEDEE',
       textLowContrast: '#9BA1A6',
+      textHighContrast: '#ECEDEE',
+
+      ctaBackgroundSolid: '#ECEDEE',
+      ctaTextSolid: '#151718',
+
+      backdropOverlay: 'rgba(0, 0, 0, 0.82)',
     },
 
     fonts: {
       regular: 'Inter_400Regular',
       semiBold: 'Inter_600SemiBold',
       bold: 'Inter_700Bold',
+    },
+
+    fontSizes: {
+      xxl: 48,
+      xl: 32,
+      lg: 24,
+      md: 20,
+      base: 16,
+      sm: 14,
+      xs: 12,
+    },
+
+    lineHeights: {
+      xxl: 64,
+      xl: 48,
+      lg: 32,
+      md: 32,
+      base: 24,
+      sm: 24,
+      xs: 20,
+    },
+
+    space: {
+      xl: 40,
+      lg: 32,
+      md: 24,
+      base: 16,
+      sm: 8,
+    },
+
+    radii: {
+      full: 1000,
     },
   },
   utils: {
