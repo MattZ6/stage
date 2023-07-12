@@ -45,7 +45,7 @@ export function WelcomeScreen() {
 
         <Styles.Content>
           <Styles.Links>
-            <Link href="/home" asChild>
+            <Link href="/sign-up" asChild>
               <Button.Root>
                 <Button.Text>{t('links.create_account')}</Button.Text>
               </Button.Root>

@@ -1,0 +1,18 @@
+{
+  "title": "Create account",
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Whats your name?"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Your best e-mail address"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "It will be our litle secret..."
+    },
+    "button": "Register"
+  }
+}

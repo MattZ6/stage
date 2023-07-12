@@ -1,0 +1,18 @@
+{
+  "title": "Criar conta",
+  "form": {
+    "name": {
+      "label": "Nome",
+      "placeholder": "Qual seu nome?"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Seu melhor endereço de e-mail"
+    },
+    "password": {
+      "label": "Senha",
+      "placeholder": "Vai ser nosso segredinho..."
+    },
+    "button": "Registrar"
+  }
+}
