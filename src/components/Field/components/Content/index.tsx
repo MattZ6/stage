@@ -1,8 +1,9 @@
 import { ReactNode } from 'react'
+import { VariantProps } from 'stitches-native'
 
 import { FieldContentStyles as Styles } from './styles'
 
-type Props = {
+type Props = VariantProps<typeof Styles.Container> & {
   children: ReactNode
 }
 

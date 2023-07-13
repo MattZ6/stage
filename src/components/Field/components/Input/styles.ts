@@ -5,8 +5,8 @@ export namespace FieldInputStyles {
     flex: 1,
 
     fontFamily: '$regular',
-    fontSize: '$sm',
-    lineHeight: '$sm',
+    fontSize: '$base',
+    lineHeight: '$base',
     color: '$textHighContrast',
 
     paddingHorizontal: '$base',

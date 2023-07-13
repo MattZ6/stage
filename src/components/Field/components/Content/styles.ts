@@ -6,10 +6,16 @@ export namespace FieldContentStyles {
 
     borderRadius: 6,
 
-    borderWidth: 1.5,
-    borderStyle: 'solid',
-    borderColor: '$elementBorderSolid',
+    backgroundColor: '$backgroundSubtle',
 
-    backgroundColor: '$elementBackgroundSolid',
+    variants: {
+      withBorder: {
+        true: {
+          borderWidth: 1.5,
+          borderStyle: 'solid',
+          borderColor: '$elementBorderSolid',
+        },
+      },
+    },
   })
 }
