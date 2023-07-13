@@ -26,7 +26,7 @@ export function SignUpScreen() {
           <Field.Root>
             <Field.Label>{t('form.name.label')}</Field.Label>
 
-            <Field.Content>
+            <Field.Content withBorder>
               <Field.Input
                 placeholder={t('form.name.placeholder')}
                 autoComplete="name"
@@ -41,7 +41,7 @@ export function SignUpScreen() {
           <Field.Root>
             <Field.Label>{t('form.email.label')}</Field.Label>
 
-            <Field.Content>
+            <Field.Content withBorder>
               <Field.Input
                 placeholder={t('form.email.placeholder')}
                 autoComplete="email"
@@ -56,7 +56,7 @@ export function SignUpScreen() {
           <Field.Root>
             <Field.Label>{t('form.password.label')}</Field.Label>
 
-            <Field.Content>
+            <Field.Content withBorder>
               <Field.Input
                 secureTextEntry={!showPassword}
                 placeholder={t('form.password.placeholder')}
