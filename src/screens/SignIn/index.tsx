@@ -1,3 +1,4 @@
+import { router } from 'expo-router'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -10,7 +11,6 @@ import { SignInScreenStyles as Styles } from './styles'
 
 export function SignInScreen() {
   const [showPassword, setShowPassword] = useState(false)
-  const [error, setError] = useState('')
   const { t } = useTranslation('sign-in')
 
   return (
@@ -26,7 +26,7 @@ export function SignInScreen() {
           <Field.Root>
             <Field.Label>{t('form.email.label')}</Field.Label>
 
-            <Field.Content>
+            <Field.Content withBorder>
               <Field.Input
                 placeholder={t('form.email.placeholder')}
                 autoComplete="email"
@@ -35,13 +35,13 @@ export function SignInScreen() {
               />
             </Field.Content>
 
-            <Field.Error message={error} />
+            <Field.Error />
           </Field.Root>
 
           <Field.Root>
             <Field.Label>{t('form.password.label')}</Field.Label>
 
-            <Field.Content>
+            <Field.Content withBorder>
               <Field.Input
                 secureTextEntry={!showPassword}
                 placeholder={t('form.password.placeholder')}
@@ -59,18 +59,12 @@ export function SignInScreen() {
               </Field.Trailing>
             </Field.Content>
 
-            <Field.Error message={error} />
+            <Field.Error />
           </Field.Root>
         </Styles.Form>
 
         <Styles.Actions>
-          <Button.Root
-            onPress={() =>
-              setError((error) => {
-                return error ? '' : 'Deu ruim'
-              })
-            }
-          >
+          <Button.Root onPress={() => router.push('/music-styles')}>
             <Button.Text>{t('form.button')}</Button.Text>
             <Button.Trailing>
               <Styles.ArrowIcon />
